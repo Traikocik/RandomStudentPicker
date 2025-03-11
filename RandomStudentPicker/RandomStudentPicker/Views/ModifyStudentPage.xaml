@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RandomStudentPicker.Views.ModifyStudentPage"
+             Title="Modify Student Page">
+    <StackLayout>
+        <Label Text="First name:"/>
+        <Editor x:Name="FirstNameEditor" Text="{Binding FirstName}"/>
+        <Label Text="Last name:"/>
+        <Editor x:Name="LastNameEditor" Text="{Binding LastName}"/>
+        <HorizontalStackLayout>
+            <CheckBox x:Name="IsPresentCheckBox" IsChecked="{Binding IsPresent}"/>
+            <Label Text="Is present"/>
+        </HorizontalStackLayout>
+        <Button Text="Save student's data" Clicked="SubmitButton_Clicked"/>
+    </StackLayout>
+</ContentPage>
