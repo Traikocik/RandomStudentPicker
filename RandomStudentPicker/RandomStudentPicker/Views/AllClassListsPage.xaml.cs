@@ -10,13 +10,14 @@ public partial class AllClassListsPage : ContentPage
         int seed = DateTime.UtcNow.Date.GetHashCode();
         Random random = new(seed);
         AllClassLists.LuckyNumber = random.Next(1, 35);
-        BindingContext = new AllClassLists();
+        //BindingContext = new AllClassLists();
         LuckyNumberLabel.Text = AllClassLists.LuckyNumber.ToString();
     }
 
     protected override void OnAppearing()
     {
         base.OnAppearing();
+        AllClassLists.LoadClassLists();
         ClassListCollection.ItemsSource = AllClassLists.ClassLists;
     }
 
@@ -26,6 +27,7 @@ public partial class AllClassListsPage : ContentPage
         if (!string.IsNullOrEmpty(classListName))
         {
             AllClassLists.ClassLists.Add(new ClassList(classListName));
+            AllClassLists.SaveClassLists();
         }
         else
         {

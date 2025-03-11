@@ -29,13 +29,13 @@
     <AppXManifest Include="E:\Projects\RandomStudentPicker\RandomStudentPicker\RandomStudentPicker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-03-11T16:49:05.041</Modified>
+      <Modified>2025-03-11T21:11:25.264</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\Projects\RandomStudentPicker\RandomStudentPicker\RandomStudentPicker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-03-11T16:49:04.882</Modified>
+      <Modified>2025-03-11T20:43:49.740</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Projects\RandomStudentPicker\RandomStudentPicker\RandomStudentPicker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\RandomStudentPicker.runtimeconfig.json">
       <PackagePath>RandomStudentPicker.runtimeconfig.json</PackagePath>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Projects\RandomStudentPicker\RandomStudentPicker\RandomStudentPicker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\RandomStudentPicker.dll">
       <PackagePath>RandomStudentPicker.dll</PackagePath>
-      <Modified>2025-03-11T16:49:04.582</Modified>
+      <Modified>2025-03-11T21:11:24.862</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Projects\RandomStudentPicker\RandomStudentPicker\RandomStudentPicker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>RandomStudentPicker.exe</PackagePath>
-      <Modified>2025-03-11T16:49:04.586</Modified>
+      <Modified>2025-03-11T21:11:24.867</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Projects\RandomStudentPicker\RandomStudentPicker\RandomStudentPicker\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>

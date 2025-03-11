@@ -24,7 +24,7 @@
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <StackLayout Orientation="Horizontal">
-                    <CheckBox IsChecked="{Binding IsPresent}" />
+                    <CheckBox IsChecked="{Binding IsPresent}" CheckedChanged="CheckBox_CheckedChanged" />
                     <Label Text="{Binding Number}"
                            FontSize="20"/>
                     <Label Text="{Binding FirstName}"

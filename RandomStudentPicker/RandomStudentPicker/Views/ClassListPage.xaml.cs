@@ -24,28 +24,8 @@ public partial class ClassListPage : ContentPage
 
     private async void AddStudent_Clicked(object sender, EventArgs e)
     {
-        Student student = new Student();
-        student.Number = ((ClassList)BindingContext).Students.Count + 1;
-        ((ClassList)BindingContext).Students.Add(student);
-        await Navigation.PushAsync(new ModifyStudentPage(student));
+        await Navigation.PushAsync(new ModifyStudentPage((ClassList)BindingContext));
     }
-
-    //private async void AddStudent_Clicked(object sender, EventArgs e)
-    //{
-    //    var student = new Student();
-    //    var modifyPage = new ModifyStudentPage(student);
-
-    //    await Navigation.PushAsync(modifyPage);
-
-    //    // Wait for ModifyStudentPage to finish, then add student to the list
-    //    modifyPage.Disappearing += (s, args) =>
-    //    {
-    //        if (!string.IsNullOrWhiteSpace(student.FirstName) || !string.IsNullOrWhiteSpace(student.LastName))
-    //        {
-    //            ((ClassList)BindingContext).Students.Add(student);
-    //        }
-    //    };
-    //}
 
     private async void DrawStudent_Clicked(object sender, EventArgs e)
     {
@@ -57,7 +37,7 @@ public partial class ClassListPage : ContentPage
         if (e.CurrentSelection.Count != 0)
         {
             var student = (Student)e.CurrentSelection[0];
-            await Navigation.PushAsync(new ModifyStudentPage(student));
+            await Navigation.PushAsync(new ModifyStudentPage((ClassList)BindingContext, student));
             StudentCollection.SelectedItem = null;
         }
     }
@@ -66,29 +46,15 @@ public partial class ClassListPage : ContentPage
     {
         if (sender is ImageButton imageButton && imageButton.BindingContext is Student studentToBeDeleted)
         {
-            ((ClassList)BindingContext).Students.Remove(studentToBeDeleted);
-            
+            ClassList classList = ((ClassList)BindingContext);
+            classList.Students.Remove(studentToBeDeleted);
+            classList.Students.Where(s => s.Number > studentToBeDeleted.Number).ToList().ForEach(s => { s.Number--; });
+            AllClassLists.SaveClassLists();
         }
     }
 
-    //private async void StudentCollection_SelectionChanged(object sender, SelectionChangedEventArgs e)
-    //{
-    //    if (e.CurrentSelection.Count != 0)
-    //    {
-    //        var student = (Student)e.CurrentSelection[0];
-    //        var modifyPage = new ModifyStudentPage(student);
-
-    //        await Navigation.PushAsync(modifyPage);
-
-    //        // Wait for ModifyStudentPage to finish, then add student to the list
-    //        modifyPage.Disappearing += (s, args) =>
-    //        {
-    //            if (!string.IsNullOrWhiteSpace(student.FirstName) || !string.IsNullOrWhiteSpace(student.LastName))
-    //            {
-    //                StudentCollection.ItemsSource = ((ClassList)BindingContext).Students;
-    //            }
-    //        };
-    //        StudentCollection.SelectedItem = null;
-    //    }
-    //}
+    private void CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
+    {
+        AllClassLists.SaveClassLists();
+    }
 }

@@ -10,11 +10,23 @@ namespace RandomStudentPicker.Models
     public class Student : INotifyPropertyChanged
     {
         //public static int LastNumber { get; set; } = 0;
-        public int Number { get; set; }
-
+        private int _number;
         private string _firstName;
         private string _lastName;
         private bool _isPresent;
+
+        public int Number
+        {
+            get => _number;
+            set
+            {
+                if (_number != value)
+                {
+                    _number = value;
+                    OnPropertyChanged(nameof(Number));
+                }
+            }
+        }
 
         public string FirstName
         {
