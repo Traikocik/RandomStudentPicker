@@ -40,6 +40,9 @@ public partial class ModifyStudentPage : ContentPage
     private async void SubmitButton_Clicked(object sender, EventArgs e)
     {
         Student student = (Student)BindingContext;
+        string firstName = FirstNameEditor.Text;
+        string lastName = LastNameEditor.Text;
+        bool isPresent = IsPresentCheckBox.IsChecked;
 
         if (ParentClassList.Students.Where(s => s.Number == student.Number).Count() == 0)
         {
@@ -50,9 +53,21 @@ public partial class ModifyStudentPage : ContentPage
             student = ParentClassList.Students.First(s => s.Number == student.Number);
         }
 
-        student.FirstName = FirstNameEditor.Text;
-        student.LastName = LastNameEditor.Text;
-        student.IsPresent = IsPresentCheckBox.IsChecked;
+        if (string.IsNullOrEmpty(firstName))
+        {
+            await DisplayAlert("WARNING!", "First name's entry is empty! Can't add new student.", "OK");
+            return;
+        }
+
+        if (string.IsNullOrEmpty(lastName))
+        {
+            await DisplayAlert("WARNING!", "Last name's entry is empty! Can't add new student.", "OK");
+            return;
+        }
+
+        student.FirstName = firstName;
+        student.LastName = lastName;
+        student.IsPresent = isPresent;
 
         AllClassLists.SaveClassLists();
 

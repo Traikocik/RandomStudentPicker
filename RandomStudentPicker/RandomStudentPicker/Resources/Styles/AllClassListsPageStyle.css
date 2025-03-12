@@ -26,11 +26,11 @@
 }
 
 #ClassListCollection {
-    margin-left: 150;
-    margin-right: 150;
+    margin: 10 150 0 150;
 }
 
 .ClassListItem {
+    margin: 100;
     padding: 16;
     -maui-orientation: horizontal;
     -maui-spacing: 4;

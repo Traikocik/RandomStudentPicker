@@ -3,9 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RandomStudentPicker.Views.DrawRandomStudentPage"
              Title="Random Student Drawing Page">
-    <StackLayout>
+    <ContentPage.Resources>
+        <StyleSheet Source="/Resources/Styles/DrawRandomStudentPageStyle.css" />
+    </ContentPage.Resources>
+    <FlexLayout x:Name="MainLayout">
         <Label Text="Click the button to draw a student"/>
         <Label x:Name="DrawedStudentLabel"/>
-        <Button Text="Draw a student" Clicked="DrawStudentButton_Clicked"/>
-    </StackLayout>
+        <Button BackgroundColor="#315152"
+                TextColor="whitesmoke"
+                Text="Draw a student"
+                Clicked="DrawStudentButton_Clicked"/>
+    </FlexLayout>
 </ContentPage>

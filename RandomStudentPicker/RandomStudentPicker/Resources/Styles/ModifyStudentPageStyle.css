@@ -1,0 +1,47 @@
+^contentpage {
+    background-color: cadetblue;
+}
+
+label {
+    font-family: Arial;
+}
+
+#MainLayout {
+    width: 300;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10;
+}
+
+#MainLayout > label {
+    font-size: 24;
+    font-style: bold;
+}
+
+#MainLayout > editor {
+    width: 300;
+    background-color: #243D3D;
+    color: whitesmoke;
+    font-size: 16;
+}
+
+#MainLayout > button {
+    width: 300;
+    padding: 10;
+    border-color: #213838;
+    color: whitesmoke;
+    background-color: #315152;
+    font-family: Arial;
+    font-style: bold;
+    font-size: 20;
+}
+
+#IsPresentCheckBoxLayout {
+    -maui-orientation: horizontal;
+}
+
+#IsPresentCheckBoxLayout label {
+    margin-top: 10;
+    font-size: 16;
+}

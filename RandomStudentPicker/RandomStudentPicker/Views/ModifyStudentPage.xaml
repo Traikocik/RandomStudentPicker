@@ -3,15 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RandomStudentPicker.Views.ModifyStudentPage"
              Title="Modify Student Page">
-    <StackLayout>
+    <ContentPage.Resources>
+        <StyleSheet Source="/Resources/Styles/ModifyStudentPageStyle.css" />
+    </ContentPage.Resources>
+    <FlexLayout x:Name="MainLayout">
         <Label Text="First name:"/>
         <Editor x:Name="FirstNameEditor" Text="{Binding FirstName}"/>
         <Label Text="Last name:"/>
         <Editor x:Name="LastNameEditor" Text="{Binding LastName}"/>
-        <HorizontalStackLayout>
+        <StackLayout x:Name="IsPresentCheckBoxLayout">
             <CheckBox x:Name="IsPresentCheckBox" IsChecked="{Binding IsPresent}"/>
             <Label Text="Is present"/>
-        </HorizontalStackLayout>
-        <Button Text="Save student's data" Clicked="SubmitButton_Clicked"/>
-    </StackLayout>
+        </StackLayout>
+        <Button BackgroundColor="#315152"
+                TextColor="whitesmoke"
+                Text="Save student's data" 
+                Clicked="SubmitButton_Clicked"/>
+    </FlexLayout>
 </ContentPage>

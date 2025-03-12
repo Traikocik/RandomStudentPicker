@@ -32,7 +32,7 @@ public partial class DrawRandomStudentPage : ContentPage
         Random random = new();
 		Student drawedStudent = drawableStudents[random.Next(drawableStudents.Count)];
 
-		DrawedStudentLabel.Text = $"Number in w class list: {drawedStudent.Number}\nFirst name: {drawedStudent.FirstName}\nLast name: {drawedStudent.LastName}";
+		DrawedStudentLabel.Text = $"Number in class list: {drawedStudent.Number}\nFirst name: {drawedStudent.FirstName}\nLast name: {drawedStudent.LastName}";
 
         classList.AskedStudentsNumbers[2] = classList.AskedStudentsNumbers[1];
         classList.AskedStudentsNumbers[1] = classList.AskedStudentsNumbers[0];

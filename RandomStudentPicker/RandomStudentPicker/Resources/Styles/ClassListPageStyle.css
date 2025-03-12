@@ -1,0 +1,51 @@
+^contentpage {
+    background-color: cadetblue;
+    padding: 10;
+}
+
+#Description {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#StudentsLabel {
+    margin-top: 10;
+    font-size: 30;
+    font-style: bold;
+}
+
+#StudentCollection {
+    margin-left: 150;
+    margin-right: 150;
+}
+
+.StudentItem {
+    padding: 20;
+    background-color: #4C7e80;
+}
+
+.StudentItem flexlayout{
+    justify-content: space-between;
+}
+
+.StudentItemData {
+    -maui-orientation: horizontal;
+    -maui-spacing: 4;
+}
+
+.StudentItemData label {
+    margin-top: 6;
+    font-size: 20;
+}
+
+#IsPresentLabel {
+    margin-left: -10;
+    margin-right: 20;
+    font-family: Bahnschrift;
+    font-size: 14;
+}
+
+#RemoveImageButton {
+    margin-top: 30px;
+}

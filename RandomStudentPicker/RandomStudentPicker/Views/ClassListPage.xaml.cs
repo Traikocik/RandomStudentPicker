@@ -49,6 +49,17 @@ public partial class ClassListPage : ContentPage
             ClassList classList = ((ClassList)BindingContext);
             classList.Students.Remove(studentToBeDeleted);
             classList.Students.Where(s => s.Number > studentToBeDeleted.Number).ToList().ForEach(s => { s.Number--; });
+            for (int i = 0; i < classList.AskedStudentsNumbers.Length; i++)
+            {
+                if (classList.AskedStudentsNumbers[i] > studentToBeDeleted.Number)
+                {
+                    classList.AskedStudentsNumbers[i]--;
+                }
+                else if (classList.AskedStudentsNumbers[i] == studentToBeDeleted.Number)
+                {
+                    classList.AskedStudentsNumbers[i] = -1;
+                }
+            }
             AllClassLists.SaveClassLists();
         }
     }

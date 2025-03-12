@@ -3,6 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RandomStudentPicker.Views.ClassListPage"
              Title="Class List Page">
+    <ContentPage.Resources>
+        <StyleSheet Source="/Resources/Styles/ClassListPageStyle.css" />
+    </ContentPage.Resources>
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add Student"
                      Clicked="AddStudent_Clicked"
@@ -12,33 +15,41 @@
                      IconImageSource="{FontImage Glyph='🎁', Color=White, Size=20}"
                      IsEnabled="True"/>
     </ContentPage.ToolbarItems>
-    <CollectionView x:Name="StudentCollection"
-                ItemsSource="{Binding Students}"
-                SelectionMode="Single"
-                SelectionChanged="StudentCollection_SelectionChanged"
-                Margin="50">
-        <CollectionView.ItemsLayout>
-            <LinearItemsLayout Orientation="Vertical"
-                               ItemSpacing="10"/>
-        </CollectionView.ItemsLayout>
-        <CollectionView.ItemTemplate>
-            <DataTemplate>
-                <StackLayout Orientation="Horizontal">
-                    <CheckBox IsChecked="{Binding IsPresent}" CheckedChanged="CheckBox_CheckedChanged" />
-                    <Label Text="{Binding Number}"
-                           FontSize="20"/>
-                    <Label Text="{Binding FirstName}"
-                           FontSize="20"/>
-                    <Label Text="{Binding LastName}"
-                           FontSize="20"/>
-                    <ImageButton WidthRequest="20" 
-                                 HeightRequest="20" 
-                                 Background="Transparent"
-                                 Margin="0,0,30,0"
-                                 Source="remove.png" 
-                                 Clicked="RemoveButton_Clicked"/>
-                </StackLayout>
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>
+    <ScrollView>
+        <StackLayout>
+            <FlexLayout x:Name="Description">
+                <Label x:Name="StudentsLabel" Text="Students:"/>
+            </FlexLayout>
+            <CollectionView x:Name="StudentCollection"
+                            ItemsSource="{Binding Students}"
+                            SelectionMode="Single"
+                            SelectionChanged="StudentCollection_SelectionChanged">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical"
+                                       ItemSpacing="6"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout StyleClass="StudentItem">
+                            <FlexLayout>
+                                <StackLayout StyleClass="StudentItemData">
+                                    <CheckBox IsChecked="{Binding IsPresent}" CheckedChanged="CheckBox_CheckedChanged" />
+                                    <Label x:Name="IsPresentLabel" Text="Is Present" />
+                                    <Label Text="{Binding Number}"/>
+                                    <Label Text="{Binding FirstName}"/>
+                                    <Label Text="{Binding LastName}"/>
+                                </StackLayout>
+                                <ImageButton x:Name="RemoveImageButton"
+                                             WidthRequest="20" 
+                                             HeightRequest="20"
+                                             Background="Transparent"
+                                             Source="remove.png"
+                                             Clicked="RemoveButton_Clicked"/>
+                            </FlexLayout>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

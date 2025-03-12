@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RandomStudentPicker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+ccbc76a865e7f0208fc50fa43e87184485f7f4be")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+c5743749644441ff9a73af73eaea8acbcb03c79a")]
 [assembly: System.Reflection.AssemblyProductAttribute("RandomStudentPicker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RandomStudentPicker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

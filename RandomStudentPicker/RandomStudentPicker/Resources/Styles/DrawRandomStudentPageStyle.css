@@ -1,0 +1,29 @@
+^contentpage {
+    background-color: cadetblue;
+}
+
+#MainLayout {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#MainLayout > label {
+    font-family: Arial;
+    font-size: 24;
+}
+
+#MainLayout > button {
+    width: 200;
+    padding: 10;
+    border-color: #213838;
+    color: whitesmoke;
+    background-color: #315152;
+    font-family: Arial;
+    font-style: bold;
+    font-size: 20;
+}
+
+#DrawedStudentLabel {
+    margin: 6;
+}

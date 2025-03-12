@@ -11,27 +11,29 @@
                      Clicked="AddClassList_Clicked"
                      IconImageSource="{FontImage Glyph='+', Color=White, Size=20}"/>
     </ContentPage.ToolbarItems>
-    <StackLayout>
-        <FlexLayout x:Name="Description">
-            <Label Text="Todays lucky number:"/>
-            <Label x:Name="LuckyNumberLabel" Text="{Binding LuckyNumber}"/>
-            <Label x:Name="ClassesLabel" Text="Classes:"/>
-        </FlexLayout>
-        <CollectionView x:Name="ClassListCollection"
-                    ItemsSource="{Binding ClassLists}"
-                    SelectionMode="Single"
-                    SelectionChanged="ClassListCollection_SelectionChanged">
-            <CollectionView.ItemsLayout>
-                <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
-            </CollectionView.ItemsLayout>
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <StackLayout StyleClass="ClassListItem">
-                        <Label Text="Class:"/>
-                        <Label Text="{Binding Name}"/>
-                    </StackLayout>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-    </StackLayout>
+    <ScrollView>
+        <StackLayout>
+            <FlexLayout x:Name="Description">
+                <Label Text="Todays lucky number:"/>
+                <Label x:Name="LuckyNumberLabel" Text="{Binding LuckyNumber}"/>
+                <Label x:Name="ClassesLabel" Text="Classes:"/>
+            </FlexLayout>
+            <CollectionView x:Name="ClassListCollection"
+                            ItemsSource="{Binding ClassLists}"
+                            SelectionMode="Single"
+                            SelectionChanged="ClassListCollection_SelectionChanged">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="6"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout StyleClass="ClassListItem">
+                            <Label Text="Class:"/>
+                            <Label Text="{Binding Name}"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
