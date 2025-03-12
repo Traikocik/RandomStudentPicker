@@ -1,0 +1,42 @@
+^contentpage {
+    background-color: cadetblue;
+    padding: 10;
+}
+
+#Description {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#Description label {
+    font-size: 24;
+    font-family: Arial;
+}
+
+#LuckyNumberLabel {
+    font-size: 28;
+    font-style: bold;
+}
+
+#ClassesLabel {
+    margin-top: 20;
+    font-size: 30;
+    font-style: bold;
+}
+
+#ClassListCollection {
+    margin-left: 150;
+    margin-right: 150;
+}
+
+.ClassListItem {
+    padding: 16;
+    -maui-orientation: horizontal;
+    -maui-spacing: 4;
+    background-color: #4C7e80;
+}
+
+.ClassListItem label {
+    font-size: 20;
+}

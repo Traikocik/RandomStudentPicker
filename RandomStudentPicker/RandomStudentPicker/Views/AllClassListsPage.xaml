@@ -3,28 +3,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RandomStudentPicker.Views.AllClassListsPage"
              Title="All Class Lists">
+    <ContentPage.Resources>
+        <StyleSheet Source="/Resources/Styles/AllClassListsPageStyle.css" />
+    </ContentPage.Resources>
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add Class List"
                      Clicked="AddClassList_Clicked"
                      IconImageSource="{FontImage Glyph='+', Color=White, Size=20}"/>
     </ContentPage.ToolbarItems>
     <StackLayout>
-        <Label Text="Dzisiejszy szczęśliwy numerek:"/>
-        <Label x:Name="LuckyNumberLabel" Text="{Binding LuckyNumber}"/>
+        <FlexLayout x:Name="Description">
+            <Label Text="Todays lucky number:"/>
+            <Label x:Name="LuckyNumberLabel" Text="{Binding LuckyNumber}"/>
+            <Label x:Name="ClassesLabel" Text="Classes:"/>
+        </FlexLayout>
         <CollectionView x:Name="ClassListCollection"
                     ItemsSource="{Binding ClassLists}"
                     SelectionMode="Single"
-                    SelectionChanged="ClassListCollection_SelectionChanged"
-                    Margin="50">
+                    SelectionChanged="ClassListCollection_SelectionChanged">
             <CollectionView.ItemsLayout>
-                <LinearItemsLayout Orientation="Vertical"
-                               ItemSpacing="10"/>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
             </CollectionView.ItemsLayout>
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <StackLayout Orientation="Horizontal">
-                        <Label Text="{Binding Name}"
-                           FontSize="20"/>
+                    <StackLayout StyleClass="ClassListItem">
+                        <Label Text="Class:"/>
+                        <Label Text="{Binding Name}"/>
                     </StackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>

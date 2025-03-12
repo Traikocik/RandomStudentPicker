@@ -392,7 +392,8 @@
         </Setter>
     </Style>
 
-    <Style TargetType="Page" ApplyToDerivedTypes="True">
+    <!--Comment this section if background color in css really doesn't work-->
+    <Style TargetType="Page" ApplyToDerivedTypes="False">
         <Setter Property="Padding" Value="0"/>
         <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource OffBlack}}" />
     </Style>

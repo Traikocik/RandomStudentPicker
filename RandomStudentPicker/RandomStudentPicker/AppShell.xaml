@@ -6,6 +6,9 @@
     xmlns:views="clr-namespace:RandomStudentPicker.Views"
     Shell.FlyoutBehavior="Disabled"
     Title="Random Student Picker">
+    <Shell.Resources>
+        <StyleSheet Source="/Resources/Styles/shellStyle.css" />
+    </Shell.Resources>
 
     <ShellContent
         Title="Home"
