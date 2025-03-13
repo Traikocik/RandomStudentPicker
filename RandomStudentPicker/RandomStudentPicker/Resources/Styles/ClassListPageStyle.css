@@ -1,6 +1,8 @@
 ^contentpage {
-    background-color: cadetblue;
     padding: 10;
+    background-color: cadetblue;
+    -maui-shell-title: whitesmoke;
+    -maui-shell-background: #2e4c4d;
 }
 
 #Description {

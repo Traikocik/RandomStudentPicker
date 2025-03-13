@@ -1,5 +1,7 @@
 ^contentpage {
     background-color: cadetblue;
+    -maui-shell-title: whitesmoke;
+    -maui-shell-background: #2e4c4d;
 }
 
 #MainLayout {

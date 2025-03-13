@@ -89,9 +89,3 @@ build_metadata.AdditionalFiles.GenKind = Css
 build_metadata.AdditionalFiles.ManifestResourceName = RandomStudentPicker.Resources.Styles.ModifyStudentPageStyle.css
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\ModifyStudentPageStyle.css
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\ModifyStudentPageStyle.css
-
-[E:/Projects/RandomStudentPicker/RandomStudentPicker/RandomStudentPicker/Resources/Styles/shellStyle.css]
-build_metadata.AdditionalFiles.GenKind = Css
-build_metadata.AdditionalFiles.ManifestResourceName = RandomStudentPicker.Resources.Styles.shellStyle.css
-build_metadata.AdditionalFiles.TargetPath = Resources\Styles\shellStyle.css
-build_metadata.AdditionalFiles.RelativePath = Resources\Styles\shellStyle.css

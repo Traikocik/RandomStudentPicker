@@ -9,7 +9,6 @@ namespace RandomStudentPicker.Models
 {
     public class Student : INotifyPropertyChanged
     {
-        //public static int LastNumber { get; set; } = 0;
         private int _number;
         private string _firstName;
         private string _lastName;
@@ -74,19 +73,13 @@ namespace RandomStudentPicker.Models
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        public Student()
-        {
-            //LastNumber++;
-            //Number = LastNumber;
-        }
+        public Student() { }
 
         public Student(string firstName, string lastName, bool isPresent)
         {
             FirstName = firstName;
             LastName = lastName;
             IsPresent = isPresent;
-            //LastNumber++;
-            //Number = LastNumber;
         }
     }
 }

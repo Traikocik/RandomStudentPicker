@@ -9,7 +9,6 @@ public partial class ModifyStudentPage : ContentPage
 	public ModifyStudentPage()
 	{
 		InitializeComponent();
-        //BindingContext = new Student();
 	}
 
     public ModifyStudentPage(ClassList parentClassList, Student studentToBeEdited)

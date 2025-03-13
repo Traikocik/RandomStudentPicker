@@ -29,7 +29,7 @@
     <AppXManifest Include="E:\Projects\RandomStudentPicker\RandomStudentPicker\RandomStudentPicker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-03-12T22:20:37.721</Modified>
+      <Modified>2025-03-13T00:09:53.968</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Projects\RandomStudentPicker\RandomStudentPicker\RandomStudentPicker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\RandomStudentPicker.dll">
       <PackagePath>RandomStudentPicker.dll</PackagePath>
-      <Modified>2025-03-12T22:20:37.295</Modified>
+      <Modified>2025-03-13T00:09:53.467</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Projects\RandomStudentPicker\RandomStudentPicker\RandomStudentPicker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>RandomStudentPicker.exe</PackagePath>
-      <Modified>2025-03-12T22:20:37.300</Modified>
+      <Modified>2025-03-13T00:09:53.473</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Projects\RandomStudentPicker\RandomStudentPicker\RandomStudentPicker\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>

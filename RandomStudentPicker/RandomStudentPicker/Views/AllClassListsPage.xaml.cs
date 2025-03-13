@@ -10,7 +10,6 @@ public partial class AllClassListsPage : ContentPage
         int seed = DateTime.UtcNow.Date.GetHashCode();
         Random random = new(seed);
         AllClassLists.LuckyNumber = random.Next(1, 35);
-        //BindingContext = new AllClassLists();
         LuckyNumberLabel.Text = AllClassLists.LuckyNumber.ToString();
     }
 

@@ -7,7 +7,6 @@ public partial class ClassListPage : ContentPage
 	public ClassListPage()
 	{
 		InitializeComponent();
-        //BindingContext = new ClassList();
     }
 
     public ClassListPage(ClassList classList)
